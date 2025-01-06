@@ -1,10 +1,12 @@
+book = "books/frankenstein.txt"
+
 def sort_on(dict):
     return dict[list(dict.keys())[0]]
 
 def chars():
     letters = "abcdefghijklmnopqrstuvwxyz"
     dic_chars = {letter: 0 for letter in letters}
-    with open("books/frankenstein.txt") as f:
+    with open(book) as f:
         file_contents = f.read()
     for char in file_contents.lower():
         if char in letters:
@@ -17,7 +19,7 @@ def chars():
 
 
 def main():
-    with open("books/frankenstein.txt") as f:
+    with open(book) as f:
         file_contents = f.read()
     words = file_contents.split()
     count = 0
@@ -28,7 +30,7 @@ def main():
 
 
 def runtime():
-    print(f"--- Begin report of books/frankenstein.txt ---")
+    print(f"--- Begin report of {book} ---")
     main()
     print("")
     chars()
