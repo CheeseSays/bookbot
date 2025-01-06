@@ -11,8 +11,6 @@ def chars():
             dic_chars[char] += 1
     list_dic_chars = [{key: value}for key, value in dic_chars.items()]
     list_dic_chars.sort(reverse=True, key=sort_on)
-    #print(f"The {list_dic_chars[0]} character was found {list_dic_chars[1]} times")
-    #print(list_dic_chars)
     for dic in list_dic_chars:
         for key, value in dic.items():
             print(f"The {key} character was found {value} times")
